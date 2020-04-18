@@ -7,7 +7,6 @@ pipeline {
       }
     }
     stage('Test Firefox') {
-      parallel {
         stage('Test Firefox') {
           steps {
             echo "testing firefox..."
@@ -24,7 +23,7 @@ pipeline {
           steps {
             sh 'echo \'Testing Edge\''
           }
-        }
+        
       }
     }
     stage('Deploy') {
