@@ -15,6 +15,7 @@ pipeline {
         }
         stage('Test Chrome') {
           steps {
+            input 'approval'
             sh 'echo \'Testing Chrome\''
           }
         }
